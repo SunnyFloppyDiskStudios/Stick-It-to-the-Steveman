@@ -2,11 +2,12 @@ package net.sunnyflops.sittsm;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.sunnyflops.sittsm.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class StickItToTheSteveman implements ModInitializer {
-    public static final String MOD_ID = "stick-it-to-the-steveman";
+    public static final String MOD_ID = "sittsm";
 
     // This logger is used to write text to the console and the log file.
     // It is considered best practice to use your mod id as the logger's name.
@@ -18,5 +19,7 @@ public class StickItToTheSteveman implements ModInitializer {
         // This code runs as soon as Minecraft is in a mod-load-ready state.
         // However, some things (like resources) may still be uninitialized.
         // Proceed with mild caution.
+
+        ModItems.registerModItems();
     }
 }
